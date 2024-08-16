@@ -46,6 +46,29 @@ body {
   gap: 2rem;
 }
 
+@media screen and (min-width:700px) and (max-width:800px){
+    .wrapper {
+        width: 55%;
+    }
+}
+
+@media screen and (min-width:600px) and (max-width:700px){
+    .wrapper {
+        width: 60%;
+    }
+}
+@media screen and (min-width:500px) and (max-width:600px) {
+    .wrapper {
+        width: 65%;
+    }
+}
+
+@media screen and (min-width:400px) and (max-width:500px) {
+    .wrapper {
+        width: 70%;
+    }
+}
+
 main {
   display: grid;
   gap: 1.5rem;
@@ -56,6 +79,7 @@ card {
   gap: 1rem;
 }
 
+/* Desktop view */
 @media screen and (min-width: 800px) {
   main {
     grid-template-columns: repeat(3, 1fr);
@@ -84,22 +108,64 @@ card {
 
 /* CSS style */
 
+body {
+ background-color: var(--clr-primary-light);
+ font-size: var(--fsize);
+ color: var(--clr-primary-grey);
+ font-family: var(--ff);
+ font-weight: var(--fw-regular);
+}
+
 .wrapper {
     margin-block-end: 50px;
 }
 
 header {
   margin-block-start: 50px;
-  margin-block-end: 50px;
+  margin-block-end: 20px;
+  display: grid;
+  place-items: center;
 }
+
+.subTitle {
+    font-weight: var(--fw-extralight);
+}
+
+.mainTitle {
+    color: var(--clr-primary-dark);
+}
+
+header p {
+    padding-block-start: 20px;
+    text-align: center;
+    max-width: 55ch;
+}
+
 .card {
-  border: 1px solid grey;
   padding: 20px;
   display: grid;
   gap: 1rem;
+  box-shadow: 3px 5px 10px rgba(128, 128, 128, 0.305);
+  background-color: white;
+  border-radius: 5px;
 }
 
 .card img {
   width: 20%;
   justify-self: end;
+  padding-block-start: 1.5rem;
+}
+
+.card:nth-child(1) {
+    border-block-start:5px solid var(--clr-highlight-cyan);
+}
+.card:nth-child(2) {
+    border-block-start:5px solid var(--clr-highlight-red);
+}
+
+.card:nth-child(3) {
+    border-block-start:5px solid var(--clr-highlight-orange);
+}
+.card:nth-child(4) {
+    border-block-start:5px solid var(--clr-highlight-blue);
 }
