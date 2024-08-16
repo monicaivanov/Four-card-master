@@ -1,37 +1,105 @@
 /* Custom properties */
 
 :root {
+  --clr-highlight-red: hsl(0, 78%, 62%);
+  --clr-highlight-orange: hsl(34, 97%, 64%);
+  --clr-highlight-blue: hsl(212, 86%, 64%);
+  --clr-highlight-cyan: hsl(180, 62%, 55%);
 
---clr-highlight-red:hsl(0, 78%, 62%);
---clr-highlight-orange: hsl(34, 97%, 64%);
---clr-highlight-blue:hsl(212, 86%, 64%);
---clr-highlight-cyan:hsl(180, 62%, 55%);
+  --clr-primary-dark: hsl(234, 12%, 34%);
+  --clr-primary-grey: hsl(229, 6%, 66%);
+  --clr-primary-light: hsl(0, 0%, 98%);
 
---clr-primary-dark:hsl(234, 12%, 34%);
---clr-primary-grey:hsl(229, 6%, 66%);
---clr-primary-light:hsl(0, 0%, 98%);
+  --ff: "Poppins", sans-serif;
 
---ff:"Poppins", sans-serif;
+  --fw-extralight: 200;
+  --fw-regular: 400;
+  --fw-semibold: 600;
 
---fw-extralight: 200;
---fw-regular:400;
---fw-semibold:600;
-
---fsize:0.9375rem;
-
+  --fsize: 0.9375rem;
 }
 
 /* CSS reset */
 * {
-    box-sizing: border-box;
-    margin: 0;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 img {
-    max-width: 100%;
-    height: 100%;
-    display: block;
+  max-width: 100%;
+  height: 100%;
+  display: block;
 }
 
 /* Mobile view */
+html,
+body {
+  display: grid;
+  place-content: center;
+}
 
+.wrapper {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  place-content: center;
+  gap: 2rem;
+}
+
+main {
+  display: grid;
+  gap: 1.5rem;
+}
+
+card {
+  display: grid;
+  gap: 1rem;
+}
+
+@media screen and (min-width: 800px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  .cardSupervisor {
+    grid-row: 2/4;
+    grid-column: 1/2;
+  }
+  .cardBuilder {
+    grid-row: 1/3;
+    grid-column: 2/3;
+  }
+
+ .cardKarma {
+    grid-row: 3/5;
+    grid-column: 2/3;
+ }
+
+ .cardCalculator {
+    grid-row: 2/4;
+    grid-column: 3/4;
+ }
+}
+
+/* CSS style */
+
+.wrapper {
+    margin-block-end: 50px;
+}
+
+header {
+  margin-block-start: 50px;
+  margin-block-end: 50px;
+}
+.card {
+  border: 1px solid grey;
+  padding: 20px;
+  display: grid;
+  gap: 1rem;
+}
+
+.card img {
+  width: 20%;
+  justify-self: end;
+}
